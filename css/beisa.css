@@ -1,0 +1,79 @@
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #009688; /* Change the background color as needed */
+    padding: 15px 0;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px; /* Adjust the logo height as needed */
+  }
+  
+  .navbar-toggler {
+    background-color: #fff; /* Toggle button background color */
+    border: none;
+  }
+  
+  .nav-link {
+    color: #fff !important; /* Nav links color */
+    font-weight: bold;
+  }
+  
+  .nav-link:hover {
+    color: #ddd !important; /* Nav links hover color */
+  }
+  
+  /* "Book Now" button */
+  .btn-primary {
+    background-color: #ff5722; /* Change button background color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ff7043; /* Button hover background color */
+  }
+  
+  /* Top Part Section Styles */
+  .backg {
+    background-image: url('./assets/EV3A2416.jpg'); /* Set your background image */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+  }
+  
+  .text h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  
+  /* Additional Styles for Improved Layout */
+  @media (max-width: 768px) {
+    .navbar-toggler {
+      background-color: #009688; /* Toggle button background color on smaller screens */
+    }
+  
+    .navbar-collapse {
+      background-color: #009688; /* Background color of the collapsed navbar on smaller screens */
+    }
+  }
+/* Style for the landing page section */
+.image-layout {
+    background-image: url('./assets/EV3A2416.jpg');
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image horizontally and vertically */
+    text-align: center;
+    padding: 100px 0; /* Adjust padding as needed */
+    color: #fff; /* Text color */
+  }
+  
+  /* Optional: Style the text within the landing page section */
+  .text h1 {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+    

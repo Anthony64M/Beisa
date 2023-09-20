@@ -1,0 +1,248 @@
+/* Reset some default styles */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Calendar Styles */
+#calendar {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#prev-month, #next-month {
+  background-color: #012450;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#prev-month:hover, #next-month:hover {
+  background-color: #555;
+}
+
+#current-month {
+  font-size: 24px;
+  font-weight: bold;
+  color: #012450;
+}
+
+.calendar table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar th {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #eee;
+  color: #012450;
+}
+
+.calendar td {
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.calendar .calendar-day {
+  background-color: #fff;
+}
+
+.calendar .unavailable {
+  background-color: #eee;
+  pointer-events: none;
+}
+
+.calendar .selected {
+  background-color: #012450;
+  color: #fff;
+}
+
+/* Form Styles */
+form {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #012450;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #012450;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 28px;
+  }
+
+  form {
+      padding: 10px;
+  }
+}
+/* Reset some default styles */
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+.container {
+  max-width: 400px; /* Adjust the width as needed */
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.container img {
+  max-width: 100px; /* Adjust the logo size as needed */
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+      max-width: 90%; /* Adjust the width as needed */
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 28px;
+  }
+
+  form {
+      padding: 10px;
+  }
+}
+
+ /* Define styles for the parent container */
+ .header {
+  position: relative;
+  text-align: center;
+}
+
+/* Define styles for the logo image */
+.logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Define styles for the header text */
+h1 {
+  margin-top: 120px; /* Adjust this value as needed to create space between the image and text */
+}
+/* Reduce the size of the previous and next month buttons */
+#prev-month, #next-month {
+  background-color: #012450;
+  color: #fff;
+  border: none;
+  padding: 6px 8px; /* Adjust the padding for button size */
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Hover styles for buttons */
+#prev-month:hover, #next-month:hover {
+  background-color: #012450;
+}
+/* body{
+  background: rgb(1,36,80);
+  background: -moz-linear-gradient(90deg, rgba(1,36,80,1) 22%, rgba(2,3,60,1) 53%, rgba(51,184,255,1) 85%, rgba(31,199,255,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(1,36,80,1) 22%, rgba(2,3,60,1) 53%, rgba(51,184,255,1) 85%, rgba(31,199,255,1) 100%);
+  background: linear-gradient(90deg, rgba(1,36,80,1) 22%, rgba(2,3,60,1) 53%, rgba(51,184,255,1) 85%, rgba(31,199,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#012450",endColorstr="#1fc7ff",GradientType=1);
+} */
