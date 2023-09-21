@@ -8,11 +8,6 @@
     max-height: 50px; /* Adjust the logo height as needed */
   }
   
-  .navbar-toggler {
-    background-color: #fff; /* Toggle button background color */
-    border: none;
-  }
-  
   .nav-link {
     color: #fff !important; /* Nav links color */
     font-weight: bold;
@@ -76,4 +71,79 @@
     font-size: 36px;
     margin-top: 20px;
   }
-    
+  .backg {
+    background-color: #f2f2f2;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .lanf {
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  .scroll-nav {
+    background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
+  }
+  .carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FEFAE0;
+  }
+  
+  .carousel-slide {
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+  }
+  
+  .carousel-slide.active {
+    opacity: 1;
+  }
+  
+  .carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    margin: 3 auto; /* centers the image horizontally */
+  }
+  
+  /* Center items vertically */
+  .carousel-container {
+    align-items: center;
+  }

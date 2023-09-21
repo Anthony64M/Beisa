@@ -1,181 +1,84 @@
-/* *{
-    border: 1px dashed limegreen;
-} */
-/* font-family: 'Abril Fatface', cursive;
-font-family: 'STIX Two Math', serif; */
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=STIX+Two+Math&display=swap" rel="stylesheet');
-html{
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=STIX+Two+Math&display=swap');
+
+html {
   scroll-behavior: smooth;
 }
-/* ----====Styling the top part of the page====---- */
-body{
-    background-position: center center;
-    background-repeat: no-repeat;
-    font-family: 'Abril Fatface', cursive;
-    text-decoration:#012450 ;
 
+/* Styling the top part of the page */
+body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-family: 'Abril Fatface', cursive;
 }
-/* ---===Mouse Bounce===--- */
 
-/* ---===end of backg ===--- */
-
-/* ---===styling about section===--- */
-/* .about{
-    text-align: center;
-    padding-top: 40px; */ */
-    /* padding-bottom: 30px;
-    margin-bottom: 200px;
-    font-family: 'STIX Two Math', serif;
+/* Styling the footer */
+.footer {
+  background: rgb(31, 199, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(31, 199, 255, 1) 0%,
+    rgba(2, 3, 60, 1) 18%,
+    rgba(37, 109, 148, 1) 88%,
+    rgba(31, 199, 255, 1) 100%
+  );
 }
-#about{
-    font-size: 28px;
-    font-family:'Cookie', cursive;
-    color: #012450;
-    
+
+footer {
+  text-align: center;
+  padding-top: 30px;
+  font-family: 'Abril Fatface', cursive;
+  background: rgb(31, 199, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(31, 199, 255, 1) 0%,
+    rgba(2, 3, 60, 1) 18%,
+    rgba(37, 109, 148, 1) 88%,
+    rgba(31, 199, 255, 1) 100%
+  );
 }
-/* ----===end of about section===---- */
 
-  /* ---====footer===--- */
+footer p {
+  margin-top: 10px;
+}
 
-  .footer {
-    background: rgb(31,199,255);
-    background: linear-gradient(90deg, rgba(31,199,255,1) 0%, rgba(2,3,60,1) 18%, rgba(37,109,148,1) 88%, rgba(31,199,255,1) 100%);  }
-  footer{
-    text-align: center;
-    padding-top: 30px;
-    font-family: 'Abril Fatface', cursive;
-    background: rgb(31,199,255);
-    background: linear-gradient(90deg, rgba(31,199,255,1) 0%, rgba(2,3,60,1) 18%, rgba(37,109,148,1) 88%, rgba(31,199,255,1) 100%);  }
-  footer p{
-    margin-top: 10px;
-  }
-   footer img:hover{
-    animation: wobble 3s infinite;
+footer img:hover {
+  animation: wobble 3s infinite;
 }
 
 @keyframes wobble {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(10);
-    }
-    10% {
-      transform: translateY(-10px);
-    }
-    20% {
-      transform: translateY(-10px);
-    }
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(10px);
+  }
+  10% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
 }
 
-/* ====----Responsiveness=====---- */
-@media only screen and (max-width: 755px){
-    #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
-        width: 100%;
-        height: 100%;
-        top: 20px;
-        left: 16px;
-        padding-top: 20%;
-    }
-    .col-md-3 img{
-        width: 100%px;
-        margin: 20px;
-    }
-    #portf{
-        margin-left: 8%;
-        margin-right: 16%;
-    }
-    button{
-        margin-left: 2%;
-        padding-bottom: 30px;
-        margin-bottom: 20px;
-    }
+/* Button styling */
+.btn-primary {
+  float: right;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background-color: #007bff;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
 
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-@media only screen and (max-width: 425px){
-    #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
-    width: 100%;
-    height: 100%;
-    top: 20px;
-    left: 16px;
-    padding-top: 20%;
-    font-size: 20px;
-    }
-    .col-md-3 img{
-        width: 100%px;
-        margin: 20px;
-    }
-    #portf{
-        margin-left: 8%;
-        margin-right: 16%;
-    }
-    button{
-        padding-bottom: 30px;
-        margin-bottom: 20px;
-    }
-    
-    #comment{
-        margin-left: 4%;
-        width: 84%;
-    }
 
+.btn-primary:active {
+  background-color: transparent;
+  color: #ffd700;
+  box-shadow: none;
 }
-@media only screen and (min-width: 825px){
-    #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
-    width: 100%;
-    height: 100%;
-    top: 20px;
-    left: 20px;
-    padding-top:30%;
-    }
-    .col-md-3 img{
-        width: 400px;
-        margin: 20px;
-      }
-    #portf{
-        margin-left:10%;
-        margin-right: 10%; 
-    }
-}
-@media only screen and (min-width: 625px){
-    #overlay,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7,#overlay8{
-        width: 100%;
-        height: 100%;
-        top: 20px;
-        left: 20px;
-        padding-top:20%; 
-        font-size: 26px;
-    }
-    .col-md-3 img{
-        width: 400px;
-        margin: 20px;
-      }
-    #portf{
-    margin-left:6%;
-    margin-right: 10%; 
-    }
-
-}
-  .btn-primary {
-    float: right;
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 20px;
-  }
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .btn-primary:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .btn-primary:active {
-    background-color: transparent;
-    color: #ffd700;
-    box-shadow: none;
-  }
 
 /* Hamburger icon styling */
 .navbar-toggler-icon {
@@ -205,225 +108,237 @@ body{
   transform: rotate(90deg) translate(-8px, 0px);
 }
 
-/* Hamburger menu background and text color */
+/* Navbar styling */
 .navbar {
   background-color: #012450;
 }
 
 .navbar-nav .nav-link {
   color: #fff;
+  font-weight: bold;
 }
 
-/* Wobble effect on nav items on tap */
+/* Nav links animation */
 .nav-link {
   transition: all 0.3s ease-in-out;
 }
 
 .nav-link:hover {
   transform: scale(1.1);
-
-}
-/* Hamburger menu background and text color */
-.navbar {
-  background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
 }
 
-.navbar-nav .nav-link {
-  color: #fff;
-}
-  @media (max-width: 768px) {
-    .navbar-collapse {
-      background-color: rgba(0, 255, 255, 0.5);
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      z-index: 1;
-    }
-  }
-  .nav-link {
-    padding-left: 25px;
-    padding-right: 25px;
-    list-style: none;
-    font-size: 20px;
-    color:#012450;
-  }
-  /* Center the "Book Now" button on smaller screens */
+/* Center the "Book Now" button on smaller screens */
 @media (max-width: 768px) {
   .navbar-collapse.justify-content-center {
     text-align: center;
   }
-  
   .navbar-collapse.justify-content-center .btn {
     display: block;
     margin: 0 auto;
   }
 }
 
-  /* Styling for the collapsed button background color */
+/* Styling for the collapsed button background color */
 .navbar-toggler-bg {
   background-color: #fff; /* Change this to your desired background color */
 }
 
-  .navbar-nav {
-    display: flex;
-    justify-content: center;
-  }
-  .navbar-brand {
-    display: flex;
-    align-items: center;
-  }
-  
-  /* Style the logo image */
-  .navbar-brand img {
-    height: 70px; /* Adjust to match the height of your navbar */
-    object-fit: contain; /* or object-fit: cover; depending on your preference */
-    margin-right: 10px; /* Add some spacing between the image and text */
-  }
-  
-  /* Style the text (if any) next to the logo */
-  .navbar-brand span {
-    font-size: 18px; /* Adjust the font size as needed */
-    color: #fff; /* Text color */
-  }   .dropdown a {
-    color: primary;
-    font-size: 20px;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown ul {
-    position: absolute;
-    top: 80%;
-    left: 0;
-    z-index: 1;
-    display: none;
-  }
-  
-  .dropdown:hover ul {
-    display: block;
-  }
-  
-  .dropdown li {
-    display: block;
-  }
-  
-  .dropdown a {
-    display: block;
-    text-decoration: none;
-  }
-  
-  .dropdown a:hover {
-    background-color: lightgray;
-  }
-  #logo {
-    max-width: 100%;
-    height: auto;
-    max-height:100%;
-  }
-  .lanf {
-    position: relative;
-    width: 100%;
-    height: 500px;
-  }
-  
-  #logo {
-    display: block;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .text {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fade-in 2s ease-out;
-    font-family: 'Old Standard TT', cursive;
+/* Center items vertically */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+}
 
-  }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  .element {
-    animation-name: fade-in;
-    animation-duration: 10s;
-  }
-  .scroll-nav {
-    background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
-  }
-  .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FEFAE0;
-  }
-  
-  .carousel-slide {
+/* Logo styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo image styling */
+.navbar-brand img {
+  height: 70px; /* Adjust to match the height of your navbar */
+  object-fit: contain; /* or object-fit: cover; depending on your preference */
+  margin-right: 10px; /* Add some spacing between the image and text */
+}
+
+/* Logo text styling */
+.navbar-brand span {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #fff; /* Text color */
+}
+
+/* Dropdown menu styling */
+.dropdown a {
+  color: primary; /* Replace with your desired color */
+  font-size: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown ul {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+.dropdown:hover ul {
+  display: block;
+}
+
+.dropdown li {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown a:hover {
+  background-color: lightgray;
+}
+
+/* Full-width responsive video background */
+#logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+.lanf {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+#logo {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fade-in 2s ease-out;
+  font-family: 'Old Standard TT', cursive;
+}
+
+@keyframes fade-in {
+  from {
     opacity: 0;
-    transition: opacity 5s ease-in-out;
   }
-  
-  .carousel-slide.active {
+  to {
     opacity: 1;
   }
-  
-  .carousel-slide img {
-    max-width: 100%;
-    height: auto;
-    margin: 3 auto; /* centers the image horizontally */
-  }
-  
-  /* Center items vertically */
-  .carousel-container {
-    align-items: center;
-  }
-  .backg {
-    position: relative;
-    height: 50vh;
-    overflow: hidden;
-    margin-top: 60px; /* Add a margin to push the content below the fixed navigation bar */
-  }
-  
-  .lanf {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .video-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-  }
-  
-  video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .container.about {
-    padding: 20px;
-  }
+}
+
+.element {
+  animation-name: fade-in;
+  animation-duration: 10s;
+}
+
+/* Scroll navigation background */
+.scroll-nav {
+  background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
+}
+
+/* Carousel container styling */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefae0;
+}
+
+/* Carousel slide styling */
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-slide img {
+  max-width: 100%;
+  height: auto;
+  margin: 3 auto; /* centers the image horizontally */
+}
+
+/* Background styling */
+.backg {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  margin-top: 60px; /* Add a margin to push the content below the fixed navigation bar */
+}
+
+.lanf {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Video container styling */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* About container padding */
+.container.about {
+  padding: 20px;
+}
+
+/* Media query for screens up to 425px wide */
+@media only screen and (max-width: 425px) {
+  /* Add your responsive styles for screens up to 425px wide here */
+}
+
+/* Media query for screens from 426px to 625px wide */
+@media only screen and (min-width: 426px) and (max-width: 625px) {
+  /* Add your responsive styles for screens from 426px to 625px wide here */
+}
+
+/* Media query for screens from 626px to 755px wide */
+@media only screen and (min-width: 626px) and (max-width: 755px) {
+  /* Add your responsive styles for screens from 626px to 755px wide here */
+}
+
+/* Media query for screens from 756px to 825px wide */
+@media only screen and (min-width: 756px) and (max-width: 825px) {
+  /* Add your responsive styles for screens from 756px to 825px wide here */
+}
+
+/* Media query for screens over 825px wide */
+@media only screen and (min-width: 826px) {
+  /* Add your responsive styles for screens over 825px wide here */
+}
