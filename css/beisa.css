@@ -1,149 +1,241 @@
 /* Navigation Bar Styles */
 .navbar {
-    background-color: #009688; /* Change the background color as needed */
-    padding: 15px 0;
-  }
-  
-  .navbar-brand img {
-    max-height: 50px; /* Adjust the logo height as needed */
-  }
-  
-  .nav-link {
-    color: #fff !important; /* Nav links color */
-    font-weight: bold;
-  }
-  
-  .nav-link:hover {
-    color: #ddd !important; /* Nav links hover color */
-  }
-  
-  /* "Book Now" button */
-  .btn-primary {
-    background-color: #ff5722; /* Change button background color */
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary:hover {
-    background-color: #ff7043; /* Button hover background color */
-  }
-  
-  /* Top Part Section Styles */
-  .backg {
-    background-image: url('./assets/EV3A2416.jpg'); /* Set your background image */
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 100px 0;
-    color: #fff;
-  }
-  
-  .text h1 {
-    font-size: 36px;
-    margin-top: 20px;
-  }
-  
-  /* Additional Styles for Improved Layout */
-  @media (max-width: 768px) {
-    .navbar-toggler {
-      background-color: #009688; /* Toggle button background color on smaller screens */
-    }
-  
-    .navbar-collapse {
-      background-color: #009688; /* Background color of the collapsed navbar on smaller screens */
-    }
-  }
-/* Style for the landing page section */
-.image-layout {
-    background-image: url('./assets/EV3A2416.jpg');
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the image horizontally and vertically */
-    text-align: center;
-    padding: 100px 0; /* Adjust padding as needed */
-    color: #fff; /* Text color */
-  }
-  
-  /* Optional: Style the text within the landing page section */
-  .text h1 {
-    font-size: 36px;
-    margin-top: 20px;
-  }
-  .backg {
-    background-color: #f2f2f2;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .lanf {
-    width: 80%;
-    height: 80%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .image-layout {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .image-container {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .text {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  h1 {
-    font-size: 48px;
-    font-weight: bold;
-    margin: 0;
-    color: #333;
-  }
-  .scroll-nav {
+  background-color: #009688; /* Change the background color as needed */
+  padding: 15px 0;
+}
+.navbar-brand img {
+  max-height: 50px; /* Adjust the logo height as needed */
+}
+.nav-link {
+  color: #fff !important; /* Nav links color */
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: #ddd !important; /* Nav links hover color */
+}
+/* "Book Now" button */
+.btn-primary {
+  background-color: #ff5722; /* Change button background color */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: #ff7043; /* Button hover background color */
+}
+/* Top Part Section Styles */
+.backg {
+  background-image: url('./assets/EV3A2416.jpg'); /* Set your background image */
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 100px 0;
+  color: #fff;
+}
+.text h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+/* Additional Styles for Improved Layout */
+@media (max-width: 768px) {
+  .navbar-toggler {
     background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
   }
-  .carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FEFAE0;
+  .navbar-collapse {
+    background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
   }
-  
-  .carousel-slide {
+}
+.navbar-toggler-bg {
+  background-color: #fff; /* Change this to your desired background color */
+}
+/* Center items vertically */
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+}
+/* Logo styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+/* Logo image styling */
+.navbar-brand img {
+  height: 70px; /* Adjust to match the height of your navbar */
+  object-fit: contain; /* or object-fit: cover; depending on your preference */
+  margin-right: 10px; /* Add some spacing between the image and text */
+}
+/* Logo text styling */
+.navbar-brand span {
+  font-size: 18px; /* Adjust the font size as needed */
+  color: #fff; /* Text color */
+}
+/* Dropdown menu styling */
+.dropdown a {
+  color: black; /* Replace with your desired color */
+  font-size: 20px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown ul {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+.dropdown:hover ul {
+  display: block;
+}
+.dropdown li {
+  display: block;
+}
+.dropdown a {
+  display: block;
+  text-decoration: none;
+}
+.dropdown a:hover {
+  background-color: lightgray;
+}
+/* Full-width responsive video background */
+.backg {
+            background-image: url("./assets/EV3A2501.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text {
+            text-align: center;
+            color: white;
+        }
+
+        .text h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+#logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+.lanf {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+#logo {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: fade-in 2s ease-out;
+  font-family: 'Old Standard TT', cursive;
+}
+@keyframes fade-in {
+  from {
     opacity: 0;
-    transition: opacity 5s ease-in-out;
   }
-  
-  .carousel-slide.active {
+  to {
     opacity: 1;
   }
-  
-  .carousel-slide img {
-    max-width: 100%;
-    height: auto;
-    margin: 3 auto; /* centers the image horizontally */
-  }
-  
-  /* Center items vertically */
-  .carousel-container {
-    align-items: center;
-  }
+}
+.element {
+  animation-name: fade-in;
+  animation-duration: 10s;
+}
+/* Scroll navigation background */
+.scroll-nav {
+  background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
+}
+/* Style for the landing page section */
+.image-layout {
+  background-image: url('./assets/EV3A2416.jpg');
+  background-size: cover; /* Cover the entire container */
+  text-align: center;
+  padding: 100px 0; /* Adjust padding as needed */
+  color: #fff; /* Text color */
+}
+/* Optional: Style the text within the landing page section */
+.text h1 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+.backg {
+  background-color: #f2f2f2;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lanf {
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-layout {
+  display: flex;
+}
+.image-container {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+.scroll-nav {
+  background-color: rgba(1, 36, 80, 0.8); /* Change the alpha value as needed */
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FEFAE0;
+}
+.carousel-slide {
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+}
+.carousel-slide.active {
+  opacity: 1;
+}
+.carousel-slide img {
+  max-width: 100%;
+  height: auto;
+  margin: 3 auto; /* centers the image horizontally */
+}
+/* Center items vertically */
+.carousel-container {
+  align-items: center;
+}
