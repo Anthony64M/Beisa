@@ -169,41 +169,6 @@ footer img:hover {
 }
 
 /* Dropdown menu styling */
-.dropdown a {
-  color: primary; /* Replace with your desired color */
-  font-size: 20px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown ul {
-  position: absolute;
-  top: 80%;
-  left: 0;
-  z-index: 1;
-  display: none;
-}
-
-.dropdown:hover ul {
-  display: block;
-}
-
-.dropdown li {
-  display: block;
-}
-
-.dropdown a {
-  display: block;
-  text-decoration: none;
-}
-
-.dropdown a:hover {
-  background-color: lightgray;
-}
-
 /* Full-width responsive video background */
 #logo {
   max-width: 100%;
@@ -252,6 +217,7 @@ footer img:hover {
   animation-name: fade-in;
   animation-duration: 10s;
 }
+
 
 /* Scroll navigation background */
 .scroll-nav {

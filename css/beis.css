@@ -175,5 +175,8 @@
     animation-name: fade-in;
     animation-duration: 10s;
   }
-
+  .container.about {
+    padding: 20px;
+  }
+  
   
