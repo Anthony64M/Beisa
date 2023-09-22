@@ -82,9 +82,9 @@ footer img:hover {
 
 /* Hamburger icon styling */
 .navbar-toggler-icon {
-  background-color: transparent;
-  border: none;
-  outline: none;
+  color:#fff;
+  border: 10px;
+  outline: 10px;
   width: 30px;
   height: 3px;
   transition: all 0.3s ease-in-out;
