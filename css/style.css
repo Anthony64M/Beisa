@@ -110,7 +110,7 @@ footer img:hover {
 
 /* Navbar styling */
 .navbar {
-  background-color: #012450;
+  background-color: rgba(1, 36, 80, 0.8);
 }
 
 .navbar-nav .nav-link {
