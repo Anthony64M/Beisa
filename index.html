@@ -18,7 +18,12 @@
         <img src="./assets/short.ico" alt="Brand logo">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <!-- Hamburger menu lines -->
+        <div class="wrapper">
+          <div class="line half start"></div>
+          <div class="line"></div>
+          <div class="line half end"></div>
+        </div>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
@@ -45,7 +50,7 @@
         <a class="btn btn-primary" href="/book.html" role="button">Book Now</a>
       </div>
     </nav>
-        <div class="backg">
+    <div class="backg">
       <div class="lanf">
         <div class="video-container">
           <video autoplay muted loop id="Beisa-intro">
@@ -63,30 +68,41 @@
       <div style="border-bottom: 1px solid #E0A100; margin-bottom: 1px; width: 100%;"></div>
     </div>
             <!-- gallery section -->
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-        <img src="./assets/EV3A2127.jpg" alt="Image description" style="width: 300px; height: 300px; margin-right: 20px; box-shadow: 5px 5px 10px #012450;">
-        <div>
-          <h2 style="color: #012450; font-family: 'Croissant One', cursive; text-decoration: underline beige; border-bottom: 1px solid #E0A100;">Accomodation</h2>
-          <p style="color: #045E8B; font-size: 18px; max-width: 500px; text-align: justify;">Indulge in Luxurious Comfort and Tranquil Elegance at Our Hotel – Your Perfect Retreat.</p>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-        <div style="display: flex; align-items: center; justify-content: center; flex-direction: row-reverse;">
-          <div style="order: 2;">
-            <h2 style="color: #012450; font-family: 'Croissant One', cursive; text-decoration: underline beige; border-bottom: 1px solid #E0A100;">Dining</h2>
-            <p style="color: #045E8B; font-size: 18px; max-width: 500px; text-align: justify;">Savor Exquisite Culinary Delights at Our Hotel's Dining Oasis – Where Every Meal is a Memorable Journey.</p>
-          </div>
-          <img src="./assets/EV3A2363.jpg" alt="Image description" style="width: 300px; height: 300px; margin-left: 20px; box-shadow: 5px 5px 10px #012450; order: 1;">
-        </div>
-      </div>
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-        <img src="./assets/EV3A2416.jpg" alt="Image description" style="width: 300px; height: 300px; margin-right: 20px; box-shadow: 5px 5px 10px #012450;">
-        <div style="margin-right: 50px;">
-          <h2 style="color: #012450; font-family: 'Croissant One', cursive; text-decoration: underline beige; border-bottom: 1px solid #E0A100;">Conference</h2>
-          <p style="color: #045E8B; font-size: 18px; max-width: 500px; text-align: justify;">Elevate Your Meetings and Conferences at Our Hotel – Where Ideas Flourish and Success Takes Center Stage.</p>
-        </div>
-      </div>
-            <!-- End of gallery section -->
+            <div class="centered">
+              <!-- Accomodation Section -->
+              <div class="card border-left-behind">
+                <div class="shadow" style="--url: url('/assets/EV3A2127.jpg')"></div>
+                <div class="image background" style="--url: url('/assets/EV3A2127.jpg')"></div>
+                <div class="image cutout" style="--url: url('/assets/EV3A2127.jpg')"></div>
+                <div class="content">
+                  <h2>Accommodation</h2>
+                  <p>Indulge in Luxurious Comfort and Tranquil Elegance at Our Hotel – Your Perfect Retreat.</p>
+                </div>
+              </div>
+            
+              <!-- Dining Section -->
+              <div class="card border-left-behind">
+                <div class="shadow" style="--url: url('/assets/EV3A2363.jpg')"></div>
+                <div class="image background" style="--url: url('/assets/EV3A2363.jpg')"></div>
+                <div class="image cutout" style="--url: url('/assets/EV3A2363.jpg')"></div>
+                <div class="content">
+                  <h2>Dining</h2>
+                  <p>Savor Exquisite Culinary Delights at Our Hotel's Dining Oasis – Where Every Meal is a Memorable Journey.</p>
+                </div>
+              </div>
+            
+              <!-- Conference Section -->
+              <div class="card border-left-behind">
+                <div class="shadow" style="--url: url('/assets/EV3A2416.jpg')"></div>
+                <div class="image background" style="--url: url('/assets/EV3A2416.jpg')"></div>
+                <div class="image cutout" style="--url: url('/assets/EV3A2416.jpg')"></div>
+                <div class="content">
+                  <h2>Conference</h2>
+                  <p>Elevate Your Meetings and Conferences at Our Hotel – Where Ideas Flourish and Success Takes Center Stage.</p>
+                </div>
+              </div>
+            </div>
+                        <!-- End of gallery section -->
       <!-- short Message -->
       <div style="background-color: #045E8B; padding: 20px; text-align: center;">
         <h2 style="color: #E0A100; text-decoration: underline;">Perfection in a Restaurant: Danny Meyer's Perspective</h2>
@@ -95,17 +111,87 @@
       </div>
             <!-- End of message -->
             <!-- carousel image -->
-            <div class="carousel-container">
-              <div class="carousel-slide active">
-                <img src="./assets/DJI_0925.jpg" alt="Image 1">
+            <div class="carousel">
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Outside</div>
+                  <div class="num">01</div>
+                  <img src="./assets/EV3A2296.jpg"/>
+                </div>
               </div>
-              <div class="carousel-slide">
-                <img src="./assets/EV3A2242.jpg" alt="Image 2">
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Frreshen</div>
+                  <div class="num">02</div>
+                  <img src="./assets/EV3A2151.jpg"/>
+                </div>
               </div>
-              <div class="carousel-slide">
-                <img src="./assets/DJI_0953.jpg" alt="Image 3">
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Dine</div>
+                  <div class="num">03</div>
+                  <img src="./assets/EV3A2361.jpg"/>
+                </div>
               </div>
-            </div> 
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Desire</div>
+                  <div class="num">04</div>
+                  <img src="./assets/EV3A2242.jpg"/>
+                </div>
+              </div>
+            
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Meeting</div>
+                  <div class="num">05</div>
+                  <img src="/assets/EV3A2481.jpg"/>
+                </div>
+              </div>
+            
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">live</div>
+                  <div class="num">06</div>
+                  <img src="./assets/EV3A2358.jpg"/>
+                </div>
+              </div>
+            
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Tranquil</div>
+                  <div class="num">07</div>
+                  <img src="./assets/EV3A2278.jpg" />
+                </div>
+              </div>
+            
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Al Freto</div>
+                  <div class="num">08</div>
+                  <img src="./assets/EV3A2035.jpg" />
+                </div>
+              </div>
+            
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Conference</div>
+                  <div class="num">09</div>
+                  <img src="./assets/EV3A2434.jpg" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-box">
+                  <div class="title">Freshen</div>
+                  <div class="num">10</div>
+                  <img src="./assets/EV3A2045.jpg" />
+                </div>
+              </div>
+            </div>
+              <div class="cursor"></div>
+              <div class="cursor cursor2"></div>
+              <!-- end of carousell -->
+              
                             <!-- Footer Section -->
           <footer style="
            color: #fff; padding: 30px;">
