@@ -9,15 +9,15 @@
 .body {
   font-family: 'Abril Fatface', cursive;
 }
-/* Carousel slide styling */
-.carousel {
+/* my-carousel slide styling */
+.my-carousel {
   position: relative;
   z-index: 1;
   height: 100vh;
   overflow: hidden;
   pointer-events: none;
 }
-.carousel-item {
+.my-carousel-item {
   --items: 10;
   --width: clamp(150px, 30vw, 300px);
   --height: clamp(200px, 40vw, 400px);
@@ -42,7 +42,7 @@
   transform: translate(var(--x), var(--y)) rotate(var(--rot));
   transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
 }
-.carousel-item .carousel-box {
+.my-carousel-item .my-carousel-box {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -53,7 +53,7 @@
   opacity: var(--opacity);
   font-family: "Orelo-sw-db", serif;
 }
-.carousel-item .carousel-box:before {
+.my-carousel-item .my-carousel-box:before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -69,7 +69,7 @@
     rgba(0, 0, 0, 0.5)
   );
 }
-.carousel-item .title {
+.my-carousel-item .title {
   position: absolute;
   z-index: 1;
   color: #fff;
@@ -79,7 +79,7 @@
   font-size: clamp(20px, 3vw, 30px);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
-.carousel-item .num {
+.my-carousel-item .num {
   position: absolute;
   z-index: 1;
   color: #fff;
@@ -88,7 +88,7 @@
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
   font-size: clamp(20px, 10vw, 80px);
 }
-.carousel-item img {
+.my-carousel-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -166,7 +166,7 @@
   width: 35px;
   height: 35px;
 }
-.cursor {
+.my-cursor {
   position: fixed;
   z-index: 10;
   top: 0;
@@ -182,11 +182,11 @@
   pointer-events: none;
 }
 @media (pointer: fine) {
-  .cursor {
+  .my-cursor {
     display: block;
   }
 }
-.cursor2 {
+.my-cursor2 {
   --size: 2px;
   transition-duration: 0.7s;
 }
