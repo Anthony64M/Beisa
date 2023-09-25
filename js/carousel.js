@@ -21,7 +21,7 @@ const getZindex = (array, index) => (array.map((_, i) => (index === i) ? array.l
 Items
 --------------------*/
 const $items = document.querySelectorAll('.my-carousel-item')
-const $cursors = document.querySelectorAll('.my-cursor')
+const $cursors = document.querySelectorAll('.cursor')
 
 const displayItems = (item, index, active) => {
   const zIndex = getZindex([...$items], active)[index]
