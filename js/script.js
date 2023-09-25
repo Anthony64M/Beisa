@@ -5,7 +5,6 @@ wrapperMenu.addEventListener('click', function(){
   wrapperMenu.classList.toggle('open');  
 })
 
-
 // 3d animation
 const angle = 20;
 const rotateCard = window;
