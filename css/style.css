@@ -1,4 +1,6 @@
-
+*{
+  font-family: 'Abril Fatface', cursive;
+}
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=STIX+Two+Math&display=swap');
 
 .html {
@@ -599,4 +601,26 @@ video {
   
   }
 
+    }
+    @media (max-width: 768px) {
+      .centered {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        gap: 2rem;
+      }
+    
+      .card {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height based on content */
+      }
+    
+      .card .image.background,
+      .card .image.cutout {
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 0rem);
+      }
+    
+      .card .content {
+        transform: rotateX(0deg) rotateY(0deg) translate3d(0, 0, 4rem); /* Adjust transformations for mobile */
+      }
+      
+      /* You can adjust other styles as needed for mobile devices */
     }
