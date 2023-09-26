@@ -10,8 +10,14 @@
 /* Styling the top part of the page */
 .body {
   font-family: 'Abril Fatface', cursive;
-}
-/* caruosel slide styling */
+    overflow-x: hidden;
+  }
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  /* caruosel slide styling */
 
 .my-carousel {
   position: relative;
@@ -591,7 +597,6 @@ video {
     position: relative;
     width: auto;
     height: auto;
-    /* padding-bottom: 100%; */
     }
 
   video {

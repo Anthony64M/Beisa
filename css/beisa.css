@@ -105,7 +105,6 @@ p {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.7);
   padding: 20px;
   border-radius: 10px;
 }
@@ -115,7 +114,7 @@ p {
   font-size: 36px;
   font-weight: bold;
   margin:40px 0;
-  color: #012450;
+  color: #fff;
 }
 
 /* Apply styles to the image within the container */
@@ -193,3 +192,20 @@ h1 {
   animation-name: fade-in;
   animation-duration: 10s;
 }
+@media (max-width: 768px) {
+  .backg {
+    height: auto; /* Adjust height for phone layout */
+    padding: 60px 0; /* Reduce padding for phone layout */
+    text-align: left; /* Align text to the left for better readability */
+    justify-content: flex-start; /* Align content at the top */
+  }
+
+  .lanf img {
+    transform: none; /* Remove vertical translation on the image */
+  }
+
+  .text {
+    padding: 20px; /* Add padding for better spacing on phone layout */
+  }
+}
+
