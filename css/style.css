@@ -581,27 +581,22 @@ video {
   padding: 20px;
 }
 
-/* Media query for screens up to 425px wide */
-@media only screen and (max-width: 425px) {
-  /* Add your responsive styles for screens up to 425px wide here */
-}
+/* Styles for phone display */
+@media only screen and (max-width: 600px) {
 
-/* Media query for screens from 426px to 625px wide */
-@media only screen and (min-width: 426px) and (max-width: 625px) {
-  /* Add your responsive styles for screens from 426px to 625px wide here */
-}
 
-/* Media query for screens from 626px to 755px wide */
-@media only screen and (min-width: 626px) and (max-width: 755px) {
-  /* Add your responsive styles for screens from 626px to 755px wide here */
-}
+  .video-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    /* padding-bottom: 100%; */
+    }
 
-/* Media query for screens from 756px to 825px wide */
-@media only screen and (min-width: 756px) and (max-width: 825px) {
-  /* Add your responsive styles for screens from 756px to 825px wide here */
-}
+  video {
+    position: relative;
+    width: auto;
+    height: auto;
+  
+  }
 
-/* Media query for screens over 825px wide */
-@media only screen and (min-width: 826px) {
-  /* Add your responsive styles for screens over 825px wide here */
-}
+    }
