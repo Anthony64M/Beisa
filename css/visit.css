@@ -131,7 +131,7 @@ ul.menu {
     font-size: 100px;
     font-weight: normal;
     color: #FDE02F;
-    font-family: Satisfy;
+    font-family: 'Abril Fatface',Satisfy;
 }
 
 .banner-text-item .form {
@@ -152,7 +152,7 @@ ul.menu {
     padding: 15px;
     margin-right: 10px;
     font-size: 18px;
-    font-family: Roboto;
+    font-family: 'Abril Fatface',Satisfy;
     border-radius: 5px;
     outline: 0;
     border: none;
@@ -182,7 +182,7 @@ ul.menu {
     background-color: #FDE02F;
     font-size: 16px;
     font-weight: normal;
-    font-family: "Barlow Condensed";
+    font-family: 'Abril Fatface',Satisfy;
     width: 20%;
 }
 
@@ -193,14 +193,14 @@ ul.menu {
 }
 
 .places-text small {
-    font-family: Roboto;
+    font-family: 'Abril Fatface',Satisfy;
     color: #FFC342;
     font-size: 15px;
     font-weight: bolder;
 }
 
 .places-text h2 {
-    font-family: Barlow Condensed;
+    font-family: 'Abril Fatface',Satisfy;
     font-size: 55px;
     color: #191D34;
     letter-spacing: 1px;
@@ -234,7 +234,7 @@ ul.menu {
 
 .cards .text {
     padding: 20px;
-    font-family: Barlow Condensed;
+    font-family: 'Abril Fatface',Satisfy;
     line-height: 50px;
 }
 
@@ -243,7 +243,7 @@ ul.menu {
     flex-flow: row;
     background-color: #FDE02F;
     font-size: 18px;
-    font-family: Roboto;
+    font-family: 'Abril Fatface',Satisfy;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -327,14 +327,14 @@ ul.menu {
 }
 
 .links h3 {
-    font-family: Barlow Condensed;
+    font-family: 'Abril Fatface',Satisfy;
     font-weight: normal;
     font-size: 23px;
     margin-bottom: 15px;
 }
 
 .links li {
-    font-family: Roboto;
+    font-family: 'Abril Fatface',Satisfy;
     cursor: pointer;
     padding: 15px 0;
 }
@@ -411,7 +411,7 @@ ul.menu {
         flex: 1;
         font-size: 30px;
         margin: 10px auto;
-        font-family: Satisfy;
+        font-family: 'Abril Fatface',Satisfy;
         color: #FDE02F;
     }
 
@@ -489,7 +489,7 @@ ul.menu {
 
     .cards .text {
         padding: 5px;
-        font-family: Barlow Condensed;
+        font-family: 'Abril Fatface',Satisfy;
     }
 }
 
