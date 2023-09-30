@@ -243,11 +243,7 @@ body {
       height: 100%; /* Ensure the content div takes up the full height of the card */
       overflow: auto; /* Add overflow to make the content scrollable if it overflows */
   }
-
-/* Add a max-height to limit the scrollable area */
-.card .content p {
-  max-height: calc(100% - 1rem); /* Adjust as needed */
-}
+  
   
   .card::after, .card::before {
     content: "";
