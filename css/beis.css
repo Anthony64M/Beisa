@@ -232,15 +232,22 @@ body {
     z-index: 3;
   }
   .card .content {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    inset: 0;
-    padding: 3.5rem;
-    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
-    z-index: 4;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      inset: 0;
+      padding: 3.5rem;
+      transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
+      z-index: 4;
+      height: 100%; /* Ensure the content div takes up the full height of the card */
+      overflow: auto; /* Add overflow to make the content scrollable if it overflows */
   }
+
+/* Add a max-height to limit the scrollable area */
+.card .content p {
+  max-height: calc(100% - 1rem); /* Adjust as needed */
+}
   
   .card::after, .card::before {
     content: "";
@@ -292,5 +299,9 @@ body {
       transform: rotateX(0deg) rotateY(0deg) translate3d(0, 0, 4rem); /* Adjust transformations for mobile */
     }
     
+    p {
+      text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    }
+  
     /* You can adjust other styles as needed for mobile devices */
   }
