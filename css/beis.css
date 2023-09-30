@@ -15,6 +15,14 @@ body {
   width: 100%;
 }
 /* Navigation Bar Styles */
+.navbar-toggler-icon {
+  background-color: #000814; /* Background color for the icon */
+  border-radius: 20px;    /* Rounded corners for the icon */
+  width: 50px;           /* Width of the icon */
+  height: 50px;           /* Height of the icon */
+  display: block;
+}
+
 .navbar {
     background-color: rgba(1, 36, 80, 0.7); /* Translucent background color */
     padding: 15px 0;
@@ -243,7 +251,11 @@ body {
       height: 100%; /* Ensure the content div takes up the full height of the card */
       overflow: auto; /* Add overflow to make the content scrollable if it overflows */
   }
-  
+
+/* Add a max-height to limit the scrollable area */
+.card .content p {
+    max-height: calc(100% - 1rem); /* Adjust as needed */
+}
   
   .card::after, .card::before {
     content: "";
