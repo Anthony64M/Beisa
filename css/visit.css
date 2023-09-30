@@ -16,6 +16,34 @@ html {
     box-sizing: border-box;
     margin: 0;
 }
+/* CSS for the navigation icon */
+.logo {
+    display: flex; /* Make the logo and text appear in a row */
+    align-items: center; /* Vertically align the logo and text */
+    text-decoration: none; /* Remove the default underline on the anchor */
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.home-text {
+    margin-left: 10px; /* Adjust the spacing between the logo and text */
+    font-size: 18px; /* Set the font size for the text */
+    color: #333; /* Set the text color */
+    font-weight: bold; /* Add bold font weight if desired */
+}
+
+/* Optional hover effect for the entire logo container */
+.logo:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
 
 
 /*------------------------Scroll Bar-----------------------*/
@@ -52,13 +80,6 @@ html {
     z-index: 1;
 }
 
-.logo {
-    flex: 1;
-    font-size: 40px;
-    padding: 20px;
-    margin-left: 50px;
-    font-family: Satisfy;
-}
 
 ul.menu {
     flex: 1;
@@ -407,13 +428,6 @@ ul.menu {
         position: static;
     }
 
-    .logo {
-        flex: 1;
-        font-size: 30px;
-        margin: 10px auto;
-        font-family: 'Abril Fatface',Satisfy;
-        color: #FDE02F;
-    }
 
     .nav-bar ul {
         display: none;
@@ -492,6 +506,7 @@ ul.menu {
         font-family: 'Abril Fatface',Satisfy;
     }
 }
+
 
 @media all and (max-width: 1334px) {
     .about-img img {
