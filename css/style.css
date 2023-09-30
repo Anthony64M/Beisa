@@ -441,21 +441,21 @@ footer img:hover {
   z-index: 3;
 }
 .card .content {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  inset: 0;
-  padding: 3.5rem;
-  transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
-  z-index: 4;
-  height: 100%; /* Ensure the content div takes up the full height of the card */
-  overflow: auto; /* Add overflow to make the content scrollable if it overflows */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    inset: 0;
+    padding: 3.5rem;
+    transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 6rem);
+    z-index: 4;
+    height: 100%;
+    overflow: auto; /* Add overflow to make the content scrollable if it overflows */
 }
 
 /* Add a max-height to limit the scrollable area */
-.card .content h2 p {
-max-height: calc(100% - 1rem); /* Adjust as needed */
+.card .content .scrollable-text {
+    max-height: calc(100% - 1rem); /* Adjust as needed */
 }
 .card::after, .card::before {
   content: "";
