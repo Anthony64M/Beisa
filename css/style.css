@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 *{
-  font-family: 'Abril Fatface', cursive;
+  font-family: 'Abril Fatface';
 }
-@import url('https://fonts.googleapis.com/css2?family=AbrilFatface&display=swap');
 html {
   margin: 0px;
   height: 100%;
@@ -19,7 +19,6 @@ body {
 
 /* Styling the top part of the page */
 .body {
-  font-family: 'Abril Fatface', cursive;
     overflow-x: hidden;
   }
   .container {
@@ -219,7 +218,6 @@ body {
 footer {
   text-align: center;
   padding-top: 30px;
-  font-family: 'Abril Fatface', cursive;
   background: rgb(31, 199, 255);
   background: linear-gradient(
     90deg,
@@ -540,7 +538,6 @@ p {
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: fade-in 2s ease-out;
-  font-family: 'Abril Fatface', cursive;
 }
 
 @keyframes fade-in {
@@ -601,9 +598,6 @@ video {
 
 /* Styles for phone display */
 @media only screen and (max-width: 600px) {
-*{
-  font-family: 'Abril Fatface', cursive;
-}
 
   .video-container {
     position: relative;
