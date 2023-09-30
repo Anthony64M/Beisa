@@ -1,3 +1,14 @@
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
 /* Navigation Bar Styles */
 .navbar {
     background-color: rgba(1, 36, 80, 0.7); /* Translucent background color */
