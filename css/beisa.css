@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
-  font-family: 'Abril Fatface';
+font-family: 'Roboto Slab', sans-serif;
 }
 
 html {
