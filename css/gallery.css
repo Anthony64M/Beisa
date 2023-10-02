@@ -93,3 +93,41 @@ p {
     margin: 0 auto; /* Center horizontally */
     padding-top: 20px; /* Add top padding to control the vertical position */
 }
+
+/* CSS for mobile devices (up to 768px width) */
+@media (max-width: 768px) {
+  body {
+    font-family: 'Abril Fatface', cursive;
+    background-color: beige;
+  }
+
+  .header {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+    padding-top: 20px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  img {
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 1px 1px 3px #0008;
+    transition: transform .4s ease-out, box-shadow .3s, z-index .3s;
+    z-index: 0;
+  }
+
+  img:hover {
+    transform: scale(3);
+    box-shadow: 3px 4px 10px #0006;
+    z-index: 999;
+  }
+}
