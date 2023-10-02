@@ -328,3 +328,18 @@ p {
 }
 
 
+/* Styling the footer for phone (using media query) */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px;
+  }
+
+  footer div {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer h3 {
+    font-size: 20px;
+  }
+}
