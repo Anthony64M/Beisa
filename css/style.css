@@ -448,9 +448,6 @@ footer img:hover {
   mask-position: center;
 }
 
-.card .image.background {
-  /* Remove transform property */
-}
 .card .image.cutout {
   /* Remove transform property */
   z-index: 3;
