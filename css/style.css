@@ -28,84 +28,7 @@ body {
   
   /* caruosel slide styling */
 
-.my-carousel {
-  position: relative;
-  z-index: 1;
-  height: 100vh;
-  overflow: hidden;
-  pointer-events: none;
-}
-.my-carousel-item {
-  --items: 10;
-  --width: clamp(150px, 30vw, 300px);
-  --height: clamp(200px, 40vw, 400px);
-  --x: calc(var(--active) * 800%);
-  --y: calc(var(--active) * 200%);
-  --rot: calc(var(--active) * 120deg);
-  --opacity: calc(var(--zIndex) / var(--items) * 3 - 2);
-  overflow: hidden;
-  position: absolute;
-  z-index: var(--zIndex);
-  width: var(--width);
-  height: var(--height);
-  margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
-  border-radius: 10px;
-  top: 50%;
-  left: 50%;
-  user-select: none;
-  transform-origin: 0% 100%;
-  box-shadow: 0 10px 50px 10px rgba(0, 0, 0, .5);
-  background: black;
-  pointer-events: all;
-  transform: translate(var(--x), var(--y)) rotate(var(--rot));
-  transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
-}
-.my-carousel-item .carousel-box {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
-  opacity: var(--opacity);
-  font-family: 'Orelo-sw-db', serif;
-}
-.my-carousel-item .carousel-box:before {
-  content: '';
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .5));
-}
-.my-carousel-item .title {
-  position: absolute;
-  z-index: 1;
-  color: #fff;
-  bottom: 20px;
-  left: 20px;
-  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
-  font-size: clamp(20px, 3vw, 30px);
-  text-shadow: 0 4px 4px rgba(0, 0, 0, .1);
-}
-.my-carousel-item .num {
-  position: absolute;
-  z-index: 1;
-  color: #fff;
-  top: 10px;
-  left: 20px;
-  transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
-  font-size: clamp(20px, 10vw, 80px);
-}
-.my-carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-}
+
 .layout {
   position: absolute;
   z-index: 0;
@@ -641,14 +564,223 @@ video {
         height: auto; /* Adjust height based on content */
       }
     
-      .card .image.background,
-      .card .image.cutout {
-        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY)) translate3d(0, 0, 0rem);
+    }
+      /* You can adjust other styles as needed for mobile devices */
+      .body-description{
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-    
-      .card .content {
-        transform: rotateX(0deg) rotateY(0deg) translate3d(0, 0, 4rem); /* Adjust transformations for mobile */
+      .slider{
+        width: 800px;
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
       }
       
-      /* You can adjust other styles as needed for mobile devices */
-    }
+      .slides{
+        width: 500%;
+        height: 500px;
+        display: flex;
+      }
+      
+      .slides input{
+        display: none;
+      }
+      
+      .slide{
+        width: 20%;
+        transition: 2s;
+      }
+      
+      .slide img{
+        width: 800px;
+        height: 500px;
+      }
+      
+      /*css for manual slide navigation*/
+      
+      .navigation-manual{
+        position: absolute;
+        width: 800px;
+        margin-top: -40px;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .manual-btn{
+        border: 2px solid rgba(1, 36, 80, 0.8);
+        padding: 5px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 1s;
+      }
+      
+      .manual-btn:not(:last-child){
+        margin-right: 40px;
+      }
+      
+      .manual-btn:hover{
+        background: rgba(1, 36, 80, 0.8);
+      }
+      
+      #radio1:checked ~ .first{
+        margin-left: 0;
+      }
+      
+      #radio2:checked ~ .first{
+        margin-left: -20%;
+      }
+      
+      #radio3:checked ~ .first{
+        margin-left: -40%;
+      }
+      
+      #radio4:checked ~ .first{
+        margin-left: -60%;
+      }
+      
+      /*css for automatic navigation*/
+      
+      .navigation-auto{
+        position: absolute;
+        display: flex;
+        width: 800px;
+        justify-content: center;
+        margin-top: 460px;
+      }
+      
+      .navigation-auto div{
+        border: 2px solid rgba(1, 36, 80, 0.8);
+        padding: 5px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      
+      .navigation-auto div:not(:last-child){
+        margin-right: 40px;
+      }
+      
+      #radio1:checked ~ .navigation-auto .auto-btn1{
+        background: rgba(1, 36, 80, 0.8);
+      }
+      
+      #radio2:checked ~ .navigation-auto .auto-btn2{
+        background: rgba(1, 36, 80, 0.8);
+      }
+      
+      #radio3:checked ~ .navigation-auto .auto-btn3{
+        background: rgba(1, 36, 80, 0.8);
+      }
+      
+      #radio4:checked ~ .navigation-auto .auto-btn4{
+        background: rgba(1, 36, 80, 0.8);
+      }
+
+
+
+
+
+
+      /* Shared styles for all screen sizes */
+.body-description {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider {
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 800px; /* Set a maximum width */
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 100%; /* Use 100% width for responsiveness */
+  height: 500px;
+}
+
+/* Manual slide navigation styles */
+.navigation-manual {
+  position: absolute;
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 800px; /* Set a maximum width */
+  top: 0; /* Adjust the positioning as needed */
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid rgba(1, 36, 80, 0.8);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px; /* Reduced margin for smaller screens */
+}
+
+.manual-btn:hover {
+  background: rgba(1, 36, 80, 0.8);
+}
+
+/* Automatic slide navigation styles */
+.navigation-auto {
+  position: absolute;
+  width: 100%; /* Use 100% width for responsiveness */
+  max-width: 800px; /* Set a maximum width */
+  display: flex;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid rgba(1, 36, 80, 0.8);
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 20px; /* Reduced margin for smaller screens */
+}
+
+@media (max-width: 767px) {
+  /* Adjust styles for screens with a maximum width of 767px */
+  .slider {
+    max-width: 100%; /* Adjust the maximum width for smaller screens */
+  }
+
+  .manual-btn:not(:last-child) {
+    margin-right: 8px; /* Further reduced margin for smaller screens */
+  }
+
+  .navigation-auto div:not(:last-child) {
+    margin-right: 8px; /* Further reduced margin for smaller screens */
+  }
+}
