@@ -566,40 +566,6 @@ video {
     
     }
       /* You can adjust other styles as needed for mobile devices */
-      .body-description{
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .slider{
-        width: 800px;
-        height: 500px;
-        border-radius: 10px;
-        overflow: hidden;
-      }
-      
-      .slides{
-        width: 500%;
-        height: 500px;
-        display: flex;
-      }
-      
-      .slides input{
-        display: none;
-      }
-      
-      .slide{
-        width: 20%;
-        transition: 2s;
-      }
-      
-      .slide img{
-        width: 800px;
-        height: 500px;
-      }
       
       /*css for manual slide navigation*/
       
@@ -679,22 +645,33 @@ video {
       #radio4:checked ~ .navigation-auto .auto-btn4{
         background: rgba(1, 36, 80, 0.8);
       }
-
-
-
-
-
-
       /* Shared styles for all screen sizes */
-.body-description {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+      .body-description {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* Add this line to make the pseudo-element position relative to this container */
+      }
+      
+      .body-description::before {
+        content: "";
+        background-image: url('../assets/EV3A2358.jpg'); /* Replace with the correct image path */
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5; /* Adjust the opacity as needed (0.0 to 1.0) for the desired level of translucency */
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Place the pseudo-element behind the content */
+      }
+      
+      /* Add other styles for the content within .body-description if needed */
+      
 .slider {
   width: 100%; /* Use 100% width for responsiveness */
   max-width: 800px; /* Set a maximum width */
