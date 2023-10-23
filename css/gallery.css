@@ -1,51 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-*{
-font-family: 'Roboto Slab', sans-serif;
-}
-  
-  /* Header styles */
-.header {
-    text-align: center;
-    margin-top: 20px; /* Adjust the top margin as needed to create space from the top of the page */
-  }
-  
-/* Center the logo at the top */
-.logo {
-    display: block ; /* Make it a block-level element */
-    margin: 0 auto ; /* Center horizontally */
-    padding-top: 20px; /* Add top padding to control the vertical position */
-}
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap');
+
+/* Styles */
 body {
-  background: #f1df8b;
+  background: #0F2027; 
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
 }
 
-.loop {
+.logo {
+  width: 100px;
+}
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.gallery img {
   width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
-.photo-grid-container {
-  column-count: 5;
-  column-width: 300px;
+
+.gallery img:hover {
+  transform: scale(1.05);
 }
+header {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;  /* Optional margin for spacing */
+}
+
+.logo {
+  width: 100px;
+  display: inline-block;
+  transition: transform 0.2s; 
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+/* Gallery Sections */
+
+.beisa-hotel,
+.beisa-conference {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+/* Image Styling */
+
 .photo-grid-item {
-  margin: 0 auto 15px;
-  max-width: 400px;
-  width: 100%;
-}
-/* Add this CSS to your external stylesheet (styles.css) */
-.photo-grid-item {
-  position: relative;
   overflow: hidden;
 }
 
 .photo-grid-item img {
-  max-width: 100%;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
 }
 
 .photo-grid-item:hover img {
-  transform: scale(1.1) rotate(10deg);
-  transform-origin: center;
+  transform: scale(1.1);
 }
 
-/* You can adjust the scale and rotate values to achieve the desired wobble effect. */
+/* Responsive */
+
+@media (max-width: 600px) {
+
+  .beisa-hotel, 
+  .beisa-conference {
+    grid-template-columns: 1fr;
+  } 
+
+}
+h3 {
+  font-size: 2rem; /* Increase font size */
+  text-align: center;  
+  position: relative;
+  overflow: hidden;
+  border-right: .15em solid white;
+}
+
