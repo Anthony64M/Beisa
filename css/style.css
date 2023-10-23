@@ -186,152 +186,97 @@ footer img:hover {
   }
 }
 
-/* Button styling */
-.btn-primary {
-  float: right;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  font-size: 20px;
-  background-color: #007bff;
+.navbar {
+  padding: 1rem;
+  background-color: rgba(1, 36, 80, 0.8); 
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.nav-link {
   color: #fff;
-  transition: all 0.2s ease-in-out;
 }
 
-.btn-primary:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+.navbar-toggler {
+  border: none;
+  padding: 0;
 }
 
-.btn-primary:active {
-  background-color: transparent;
-  color: #ffd700;
-  box-shadow: none;
-}
-
-/* Hamburger icon styling */
-.navbar-toggler-icon {
-  color:#fff;
-  border: 10px;
-  outline: 10px;
+.navbar-toggler .line {
   width: 30px;
   height: 3px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Hamburger icon color on hover */
-.navbar-toggler-icon:hover {
   background-color: #fff;
-}
-
-/* Hamburger icon animation */
-.wrapper {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  cursor: pointer;
-  transition: transform 330ms ease-out;
-}
-.wrapper .line {
-  background-color: #0247A1;
-  border-radius: 5px;
-  width: 1-0%;
-  height: 10px;
-}
-.wrapper .line.half {
-  width: 50%;
-}
-.wrapper .line.start {
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: right;
-}
-.wrapper .line.end {
-  align-self: flex-end;
-  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-  transform-origin: left;
-}
-.wrapper.open {
-  transform: rotate(-45deg);
-}
-.wrapper.open .line.start {
-  transform: rotate(-90deg) translateX(3px);
-}
-.wrapper.open .line.end {
-  transform: rotate(-90deg) translateX(-3px);
-}
-
-.navbar-toggler-icon.active {
-  transform: rotate(45deg);
-}
-
-.navbar-toggler-icon.active:before {
-  transform: rotate(-90deg) translate(-8px, 0px);
-}
-
-.navbar-toggler-icon.active:after {
-  transform: rotate(90deg) translate(-8px, 0px);
-}
-
-/* Navbar styling */
-.navbar {
-  background-color: rgba(1, 36, 80, 0.8);
-}
-
-.navbar-nav .nav-link {
-  color: #fff;
-  font-weight: bold;
-}
-
-/* Nav links animation */
-.nav-link {
+  margin: 6px 0;
+  border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
 
-.nav-link:hover {
-  transform: scale(1.1);
+.navbar-toggler .half.start {
+  width: 15px;
 }
 
-/* Center the "Book Now" button on smaller screens */
-@media (max-width: 768px) {
-  .navbar-collapse.justify-content-center {
-    text-align: center;
+.navbar-toggler .half.end {
+  width: 15px;
+  margin-left: auto;
+}
+
+/* Rotate first line */  
+.navbar-toggler.collapsed .line:first-child {
+  transform: rotate(0);
+}
+
+/* Hide middle line */
+.navbar-toggler.collapsed .line:nth-child(2) {
+  opacity: 1; 
+}
+
+/* Rotate last line */  
+.navbar-toggler.collapsed .line:last-child {
+  transform: rotate(0);
+}
+
+/* Rotate first line */
+.navbar-toggler .line:first-child {
+  transform: rotate(45deg);
+  top: 13px;
+} 
+
+/* Hide the middle line */  
+.navbar-toggler .line:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate last line */
+.navbar-toggler .line:last-child {
+  transform: rotate(-45deg);
+  top: -13px;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: fixed;
+    top: 58px; 
+    left: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(1, 36, 80, 0.8);
+    z-index: 99;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
   }
-  .navbar-collapse.justify-content-center .btn {
-    display: block;
-    margin: 0 auto;
+  
+  .navbar-collapse.show {
+    transform: translateX(0);
   }
-}
-
-/* Styling for the collapsed button background color */
-.navbar-toggler-bg {
-  background-color: #fff; /* Change this to your desired background color */
-}
-
-/* Center items vertically */
-.navbar-nav {
-  display: flex;
-  justify-content: center;
-}
-
-/* Logo styling */
-.navbar-brand {
-  display: flex;
-  align-items: center;
-}
-
-/* Logo image styling */
-.navbar-brand img {
-  height: 70px; /* Adjust to match the height of your navbar */
-  object-fit: contain; /* or object-fit: cover; depending on your preference */
-  margin-right: 10px; /* Add some spacing between the image and text */
-}
-
-/* Logo text styling */
-.navbar-brand span {
-  font-size: 18px; /* Adjust the font size as needed */
-  color: #fff; /* Text color */
+  
+  .navbar .btn {
+    display: none;
+  }
 }
 .centered {
   display: flex;
