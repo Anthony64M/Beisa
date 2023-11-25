@@ -3,184 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/short.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="./assets/short.ico">
     <title>Beisa Hotel</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/2c56b19b1168e898c7d6b8bfe/4623532eacabdba8c7d54f770.js");</script></head>
-<body>
-
-    <!-- top part section -->
-    <style>
-      /* Custom CSS for the navigation bar */
-      .navbar {
-        background-color: rgba(1, 36, 80, 0.7); /* Translucent background color */
-      }
-  
-      .navbar-toggler-icon {
-        color: #fff; /* Color of the navbar toggler icon */
-      }
-  
-      .navbar-nav .nav-link {
-        color: #fff; /* Color of the navigation links */
-      }
-  
-      .navbar-nav .nav-link:hover {
-        color: #ffc107; /* Color of the navigation links on hover */
-      }
-  
-      /* Style the "Book Now" button */
-      .btn-primary {
-        background-color: #ffc107; /* Background color of the button */
-        border-color: #ffc107; /* Border color of the button */
-        color: #012450; /* Text color of the button */
-      }
-  
-      .btn-primary:hover {
-        background-color: #ffca2b; /* Background color of the button on hover */
-        border-color: #ffca2b; /* Border color of the button on hover */
-        color: #012450; /* Text color of the button on hover */
-      }
-    </style>
-  </head>
-  <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+</head>
+<body style="  font-family: 'Abril Fatface', cursive;">
     <nav class="navbar navbar-expand-lg fixed-top">
-      <a class="navbar-brand" href="#">
-        <img src="/assets/short.ico" alt="Brand logo">
-      </a> 
-           
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#" data-nav-item="home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3" href="#cont" data-nav-item="contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link px-3" href="./visit.html" data-nav-item="gallery">VisitHub</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link px-3" href="#" data-nav-item="destinations">Destinations</a>
-            <ul class="dropdown-menu">
-                <li class="dropdown-item dropdown-item-bg"><a href="./beis.html">Beisa Hotel</a></li>
-                <li class="dropdown-item dropdown-item-bg"><a href="./beisa.html">Beisa Conference Centre</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <!-- "Book Now" button outside of the collapsed div -->
-      <div class="navbar-collapse justify-content-center">
-        <a class="btn btn-primary" href="/book.html" role="button">Book Now</a>
-      </div>
-    </nav>
-            <div class="backg">
-      <div class="lanf">
-        <div class="video-container">
-          <video autoplay muted loop id="Beisa-intro">
-            <source rel="preload" src="./assets/BEISA 1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="text">
-          <h1>WELCOME</h1>
-          <h1>TO Beisa Hotel</h1>
-        </div>
-      </div>
-    </div>
-    
-    <div class="container about" id="about">
-      <p>At Beisa Hotel, enjoy a satisfying meal at the restaurant. Quench your thirst with your favorite drink at the bar/lounge. </p>
-      <div style="border-bottom: 1px solid #E0A100; margin-bottom: 1px; width: 100%;"></div>
-    </div>
-            <!-- gallery section -->
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-        <img src="./assets/EV3A2127.jpg" alt="Image description" style="width: 300px; height: 300px; margin-right: 20px; box-shadow: 5px 5px 10px #012450;">
-        <div>
-          <h2 style="color: #012450; font-family: 'Croissant One', cursive; text-decoration: underline beige; border-bottom: 1px solid #E0A100;">Accomodation</h2>
-          <p style="color: #045E8B; font-size: 18px; max-width: 500px; text-align: justify;">We offer the best dishes made with fresh ingredients and cooked to perfection. Our menu includes a variety of options to satisfy all tastes and preferences. Whether you're in the mood for something savory or sweet, we've got you covered. Come dine with us and experience the best food and service in town.</p>
-        </div>
-      </div>
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-        <div style="display: flex; align-items: center; justify-content: center; flex-direction: row-reverse;">
-          <div style="order: 2;">
-            <h2 style="color: #012450; font-family: 'Croissant One', cursive; text-decoration: underline beige; border-bottom: 1px solid #E0A100;">Dining</h2>
-            <p style="color: #045E8B; font-size: 18px; max-width: 500px; text-align: justify;">We offer the best dishes made with fresh ingredients and cooked to perfection. Our menu includes a variety of options to satisfy all tastes and preferences. Whether you're in the mood for something savory or sweet, we've got you covered. Come dine with us and experience the best food and service in town.</p>
-          </div>
-          <img src="./assets/EV3A2363.jpg" alt="Image description" style="width: 300px; height: 300px; margin-left: 20px; box-shadow: 5px 5px 10px #012450; order: 1;">
-        </div>
-      </div>
-      <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
-        <img src="./assets/EV3A2416.jpg" alt="Image description" style="width: 300px; height: 300px; margin-right: 20px; box-shadow: 5px 5px 10px #012450;">
-        <div style="margin-right: 50px;">
-          <h2 style="color: #012450; font-family: 'Croissant One', cursive; text-decoration: underline beige; border-bottom: 1px solid #E0A100;">Conference</h2>
-          <p style="color: #045E8B; font-size: 18px; max-width: 500px; text-align: justify;">We offer the best dishes made with fresh ingredients and cooked to perfection. Our menu includes a variety of options to satisfy all tastes and preferences. Whether you're in the mood for something savory or sweet, we've got you covered. Come dine with us and experience the best food and service in town.</p>
-        </div>
-      </div>
-            <!-- End of gallery section -->
-      <!-- short Message -->
-      <div style="background-color: #045E8B; padding: 20px; text-align: center;">
-        <h2 style="color: #E0A100; text-decoration: underline;">Perfection in a Restaurant: Danny Meyer's Perspective</h2>
-        <p style="color: white; font-style: italic;">Hospitality is central to the restaurant business, yet it's a hard idea to define precisely. </p>
-        <p style="color: white; font-style: italic;">"Perfection should be the goal of a good restaurant. A big menu does not represent the worth of a restaurant, the taste of the food does.</p>
-      </div>
-            <!-- End of message -->
-            <!-- carousel image -->
-            <div class="carousel-container">
-              <div class="carousel-slide active">
-                <img src="./assets/DJI_0925.jpg" alt="Image 1">
-              </div>
-              <div class="carousel-slide">
-                <img src="./assets/EV3A2242.jpg" alt="Image 2">
-              </div>
-              <div class="carousel-slide">
-                <img src="./assets/DJI_0953.jpg" alt="Image 3">
-              </div>
-            </div> 
-                            <!-- Footer Section -->
-          <footer style="
-           color: #fff; padding: 30px;">
-            <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-                    <div style="flex: 1; padding: 10px;">
-                        <h3 style="font-size: 24px; margin-bottom: 10px;">Beisa Hotel</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan justo eget libero bibendum.</p>
-                    </div>
-                    <div style="flex: 1; padding: 10px;">
-                        <h3 style="font-size: 24px;color:white; margin-bottom: 10px;">Quick Links</h3>
-                        <ul style="list-style: none; padding: 0;">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#cont">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div style="flex: 1; padding: 10px;">
-                        <h3 id="cont" style="font-size: 24px; margin-bottom: 10px;">Contact Us</h3>
-                        <address>
-                            Nanyuki Kenya<br>
-                            Laikipia,<br>
-                            Phone: (123) 456-7890<br>
-                            Email: info@example.com
-                        </address>
-                    </div>
-                </div>
-                <hr style="border-color: #555;">
-                <p style="font-size: 16px; margin-top: 20px;">&copy; 2023 Beisa Hotels. All rights reserved.</p>
+        <a class="navbar-brand" href="#">
+            <img src="./assets/short.ico" alt="Brand logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Hamburger menu lines -->
+            <div class="wrapper">
+                <div class="line half start"></div>
+                <div class="line"></div>
+                <div class="line half end"></div>
             </div>
-        </footer>
-        <script src="./js/script.js"></script>
-        <script src="./js/carousel.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#" data-nav-item="home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="./beis.html">Beisa Hotel</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="./beisa.html">Beisa Conference Centre</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#cont" data-nav-item="contact">Contact</a>
+                </li>
 
+
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="./gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="./visit.html" data-nav-item="Visit">VisitHub</a>
+                </li>
+                <!-- Replace the dropdown with two items -->
+            </ul>
+        </div>
+        <!-- "Book Now" button outside of the collapsed div -->
+        <div class="navbar-collapse justify-content-center">
+            <a class="btn btn-primary" href="/book.html" role="button">Book Now</a>
+        </div>
+    </nav>
+        <div class="backg">
+        <div class="lanf">
+            <div class="video-container">
+                <video autoplay muted loop id="Beisa-intro">
+                    <source src="./assets/BEISA 1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="text">
+                <h1>WELCOME</h1>
+                <h1>TO Beisa Hotel</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container about" id="about" style="text-align: center;">
+        <p>At Beisa Hotel, enjoy a satisfying meal at the restaurant. <br>Quench your thirst with your favorite drink at
+            the bar/lounge.</p>
+        <div style="border-bottom: 1px solid #E0A100; margin-bottom: 1px; width: 100%;"></div>
+    </div>
+        <!-- gallery section -->
+    <div class="centered">
+<!-- Accommodation Section -->
+<a href="./gallery.html#beisa-hotel" class="card border-left-behind">
+    <div class="shadow" style="--url: url('/assets/EV3A2127.jpg')"></div>
+    <div class="image background" style="--url: url('/assets/EV3A2127.jpg')"></div>
+    <div class="image cutout" style="--url: url('/assets/EV3A2127.jpg')"></div>
+    <div class="content">
+        <h2 style="font-size: 28px;">Accomodation</h2>
+        <p class="scrollable-text">At Beisa Hotel, we offer more than just a place to stay; we provide a home away from home.
+            <br>Our rooms are designed to ensure your comfort and relaxation.
+        </p>
+    </div>
+</a>
+
+        <!-- Dining Section -->
+        <a href="./gallery.html#beisa-hotel" class="card border-left-behind">
+            <div class="shadow" style="--url: url('/assets/EV3A2363.jpg')"></div>
+            <div class="image background" style="--url: url('/assets/EV3A2363.jpg')"></div>
+            <div class="image cutout" style="--url: url('/assets/EV3A2363.jpg')">
+            </div>
+            <div class="content">
+                <h2>Dining</h2>
+                <p>Savor Exquisite Culinary Delights at Our Hotel's Dining Oasis – Where Every Meal is a Memorable Journey.</p>
+            </div>
+        </a>
+
+        <!-- Conference Section -->
+        <a href="./gallery.html#beisa-conference" class="card border-left-behind">
+            <div class="shadow" style="--url: url('/assets/EV3A2416.jpg')"></div>
+            <div class="image background" style="--url: url('/assets/EV3A2416.jpg')"></div>
+            <div class="image cutout" style="--url: url('/assets/EV3A2416.jpg')">
+            </div>
+            <div class="content">
+                <h2>Conference</h2>
+                <p>Elevate Your Meetings and Conferences at Our Hotel – Where Ideas Flourish and Success Takes Center Stage.</p>
+            </div>
+        </a>
+    </div>
+    <!-- End of gallery section -->
+    <!-- short Message -->
+    <div style="background-color: #045E8B; padding: 20px; text-align: center;">
+        <h2 style="color: #E0A100; text-decoration: underline;">Slogan</h2>
+        <p style="color: white; font-style: italic;">Unique hospitality and comfort.</p>
+    </div>
+    <!-- End of message -->
+    <!-- carousel image -->
+ <!-- Slideshow container -->
+  <!--image slider start-->
+  <div class="body-description">
+  <div class="slider">
+    <div class="slides">
+      <!--radio buttons start-->
+      <input type="radio" name="radio-btn" id="radio1">
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+      <!--radio buttons end-->
+      <!--slide images start-->
+      <div class="slide first">
+        <img src="./assets/EV3A2278.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/EV3A2296.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/EV3A2045.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="./assets/EV3A2501.jpg" alt="">
+      </div>
+      <!--slide images end-->
+      <!--automatic navigation start-->
+      <div class="navigation-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+        <div class="auto-btn4"></div>
+      </div>
+      <!--automatic navigation end-->
+    </div>
+    <!--manual navigation start-->
+    <div class="navigation-manual">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+    </div>
+    <!--manual navigation end-->
+  </div>
+  </div>
+  <!--image slider end-->
+
+  <script type="text/javascript">
+  var counter = 1;
+  setInterval(function(){
+    document.getElementById('radio' + counter).checked = true;
+    counter++;
+    if(counter > 4){
+      counter = 1;
+    }
+  }, 5000);
+  </script>
+    <div class="cursor"></div>
+    <div class="cursor cursor2"></div>
+    <!-- End of carousel -->
+    <!-- Footer Section -->
+    <footer style="color: #fff; padding: 30px;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; padding: 10px;">
+                    <h3 style="font-size: 24px; margin-bottom: 10px;">Mission</h3>
+                    <p>Provision of Quality service & memorable experience.</p>
+                    <h3>Vision</h3>
+                    <p>To be the leading hospitality service provider.</p>
+                </div>
+                <div style="flex: 1; padding: 10px;">
+                    <h3 style="font-size: 24px;color:white; margin-bottom: 10px;">Quick Links</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#cont">Contact</a></li>
+                    </ul>
+                </div>
+                <div style="flex: 1; padding: 10px;">
+                    <h3 id="cont" style="font-size: 24px; margin-bottom: 10px;">Contact Us</h3>
+                    <address>
+                        Nanyuki Kenya<br>
+                        Laikipia,<br>
+                        Phone: +254 722 454978.<br>
+                            Email: beisahotel@gmail.com
+
+                    </address>
+                </div>
+            </div>
+            <hr style="border-color: #555;">
+            <p style="font-size: 16px; margin-top: 20px;">&copy; 2023 Beisa Hotels. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- Chatbot -->
+<div class="sect">
+<button class="chatbot-toggler">
+    <span class="material-symbols-rounded">mode_comment</span>
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <div class="chatbot">
+    <header>
+      <h2>Chatbot</h2>
+      <span class="close-btn material-symbols-outlined">close</span>
+    </header>
+    <ul class="chatbox">
+      <li class="chat incoming">
+        <span class="material-symbols-outlined">smart_toy</span>
+        <p>Hi there 👋<br>How can I help you today?</p>
+      </li>
+    </ul>
+    <div class="chat-input">
+      <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+      <span id="send-btn" class="material-symbols-rounded">send</span>
+    </div>
+  </div>
+</div>
+<!-- Chatbot -->
+    <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dialogflow@0.11.0"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
-
+<!-- Chatbot Floating Button -->
 </html>

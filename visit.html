@@ -2,112 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="./assets/short.ico"/>
     <title>Places to Visit in Laikipia</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .place {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .place img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .place a {
-            display: block;
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        @media screen and (min-width: 768px) {
-            .place {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .place img {
-                max-width: 45%;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/visit.css">
 </head>
-<body>
-    <header>
-        <h1>Places to Visit in Laikipia</h1>
-    </header>
-    <div class="container">
-        <div class="place">
-            <img src="https://www.tripadvisor.com/Attractions-g10501193-Activities-Laikipia_County_Rift_Valley_Province.html" alt="Mount Kenya Wildlife Conservancy">
-            <div>
-                <h2>Mount Kenya Wildlife Conservancy</h2>
-                <p>A wildlife conservancy located on the slopes of Mount Kenya, offering a chance to see a variety of animals in their natural habitat.</p>
-                <a href="https://www.tripadvisor.com/Attractions-g10501193-Activities-Laikipia_County_Rift_Valley_Province.html">Learn More</a>
+    <body style="  font-family: 'Abril Fatface', cursive;">
+
+        <!--===========Nav Bar=================-->
+        <section class="nav-bar">
+            <a href="./index.html" class="logo">
+                <img src="/assets/short.ico" alt="Brand logo">
+                <span class="home-text">Home</span>
+            </a>
+                        <ul class="menu">
+            </ul>
             </div>
-        </div>
-        <div class="place">
-            <img src="https://farandwild.travel/wilder/article/top-activities-to-do-in-laikipia" alt="Camel Trekking">
-            <div>
-                <h2>Camel Trekking</h2>
-                <p>A unique way to explore the Laikipia landscape, with guided tours available for all skill levels.</p>
-                <a href="https://farandwild.travel/wilder/article/top-activities-to-do-in-laikipia">Learn More</a>
-            </div>
-        </div>
-        <div class="place">
-            <img src="https://www.expedia.com/Things-To-Do-In-Laikipia-County.d6341994.Travel-Guide-Activities" alt="Ol Pejeta Conservancy">
-            <div>
-                <h2>Ol Pejeta Conservancy</h2>
-                <p>A wildlife conservancy that is home to the largest black rhino sanctuary in East Africa, as well as other endangered species.</p>
-                <a href="https://www.expedia.com/Things-To-Do-In-Laikipia-County.d6341994.Travel-Guide-Activities">Learn More</a>
-            </div>
-        </div>
-            <div class="place">
-                <img src="https://www.go2africa.com/african-travel-blog/expect-laikipia-lewa-kenya" alt="Lewa Wildlife Conservancy">
-                <div>
-                    <h2>Lewa Wildlife Conservancy</h2>
-                    <p>A wildlife conservancy that is home to a variety of animals, including the endangered Grevy's zebra and black rhino. Visitors can go on game drives, guided walks, and horseback safaris.</p>
-                    <a href="https://www.go2africa.com/african-travel-blog/expect-laikipia-lewa-kenya">Learn More</a>
+        
+        </section>
+        <!--===============Banner================-->
+        <section class="banner">
+            <div class="banner-text-item">
+                <div class="banner-heading">
+                    <h1>Places to visit in Laikipia</h1>
                 </div>
+                <form class="form">
+                    <input type="text" list="mylist" placeholder="Where would you like to go?">
+                    <datalist id="mylist">
+                        <option>Ol Pejeta Conservency</option>
+                        <option>Mount Kenya Wildlife Conservancy</option>
+                        <option>Ol Jogi Wildlife conservancy</option>
+                        <option>Thompson Falls</option>
+                        <option>Mugie Conservancy</option>
+                    </datalist>
+                </form>
             </div>
-            <div class="place">
-                <img src="https://www.discoverafrica.com/safaris/kenya/laikipia-plateau/" alt="Laikipia Plateau">
-                <div>
-                    <h2>Laikipia Plateau</h2>
-                    <p>A vast plateau that is home to a variety of wildlife, including elephants, lions, and leopards. Visitors can go on game drives, guided walks, and birdwatching tours.</p>
-                    <a href="https://www.discoverafrica.com/safaris/kenya/laikipia-plateau/">Learn More</a>
+        </section>
+        
+        <!--==============Places===================-->
+        <section class="places">
+            <div class="places-text">
+                <small>FEATURED TOURS PACKAGES</small>
+                <h2>Favourite Places</h2>
+            </div>
+        
+            <div class="cards">
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <a href="https://www.olpejetaconservancy.org/">
+                            <img src="./assets/blackrhinosolpejeta.jpg" class="image-card">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="text">
+                        <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+                        <h2>Ol Pejeta Conservancy</h2>
+                        <div class="card-box">
+                            <p class="location">Ol Pejeta, Kenya</p>
+                        </div>
+                    </div>
+        
                 </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <a href="https://mountkenyawildlifeconservancy.org/">
+                            <img src="./assets/mkenyajpeg" class="image-card">
+                            </a>
+                        </div>
+                    </div>
+        
+                    <div class="text">
+                        <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+                        <h2>Mount Kenya Wildlife Conservancy</h2>
+                        <div class="card-box">
+                            <p class="location"> Laikipia, Kenya</p>
+                        </div>
+                    </div>
+        
+                </div>
+                <div class="card">
+                    <div class="zoom-img">
+                        <div class="img-card">
+                            <a href="https://oljogi.org/">
+                            <img src="./assets/OlJogi.jpeg" class="image-card">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <span class="rating">&#11088;&#11088;&#11088;&#11088;&#11088;</span>
+                        <h2>Ol Jogi Conservancy</h2>
+                        <div class="card-box">
+                            <p class="location"> Laikipia, Kenya</p>
+                        </div>
+                    </div>
+
+                    </div>
+                    </div>
+                    </section>
+                    
+        
+        
+        <!--===========Footer=================-->
+        <div class="footer">
+            <div class="links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li>Contact Us</li>
+                    <li>About</li>
+                </ul>
             </div>
+            <div class="links">
+                <h3>Beisa</h3>
+                <address>
+                    Nanyuki Kenya<br>
+                    Laikipia,<br>
+                    Phone: +254 722 454978.<br>
+                    Email: info@example.com
     </div>
-</body>
-</html>
+        </div>
+        </body>
+        </html>

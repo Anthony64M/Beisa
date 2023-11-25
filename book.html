@@ -1,81 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beisa Hotel Booking</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Beisa Hotel Booking</title>
     <link rel="shortcut icon" href="./assets/short.ico" />
-    <link rel="stylesheet" href="./css/book.css"> <!-- Include your stylesheet if needed -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/book.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+<body style="  font-family: 'Abril Fatface', cursive;">
+  <div class="center-container">
     <div class="header">
         <a href="index.html">
             <img src="./assets/short.ico" alt="Your Logo" class="logo">
         </a>
-        <h1>Beisa Booking</h1>
     </div>
-        <!-- Calendar -->
-    <div id="calendar">
-        <div id="calendar-header">
-            <button id="prev-month">Previous Month</button>
-            <h2 id="current-month">Month Year</h2>
-            <button id="next-month">Next Month</button>
+    </div>
+    <div class="row">
+      <div class="col-75">
+        <div class="container">
+          <center><h2>Beisa Hotel Booking Form</h2></center>
+          <form action="submit_phpcrm_form.php" method="POST">
+            <div class="row">
+              <div class="col-50">
+                <input type="text" id="fname" required  name="name" placeholder="Name">  
+              </div>
+             </div>
+                  <div class="row">
+                <div class="col-50">
+                    <input type="email" name="email" required placeholder="Email">
+                </div>
+                <div class="col-50">
+                   <input type="number" name="phone" required placeholder="Phone">
+               </div>
+            </div>
+                <div class="row">
+                  <div class="col-50">
+                    <input type="text" id="address" name="address" placeholder="Address">
+                  </div>     
+             </div>
+             <div class="row">
+                 <div class="col-50">
+                     <input type="text" name="city" required placeholder="City">
+                 </div>
+                 <div class="col-50">
+                    <input type="text" name="state" required placeholder="State">
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-50">
+                    <input type="number" name="zip_code" required placeholder="Zip Code">
+                </div>
+                <div class="col-50">
+                   <input type="text" name="country" required placeholder="Country">
+               </div>
+            </div>
+            <div class="row">
+                <div class="col-50">
+                    <label>Check In</label>
+                    <input type="date" name="check_in_date" required >
+                </div>
+                <div class="col-50">
+                    <label>Check Out</label>
+                   <input type="date" name="check_out_date" required >
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-50">
+                  <input type="number" name="no_of_person" placeholder="No Of Person" required >
+              </div>
+              <div class="col-50">
+                <select name="no_of_male" >
+                  <option value="null">Male</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+          </div>
+           <div class="row">
+            <div class="col-50">
+                <select name="no_of_female" >
+                  <option value="null">Female</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+            </div>
+            <div class="col-50">
+              <select name="no_of_kids" >
+                <option value="null">Kids</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+          </div>
+          </div>
+          <input type="submit" value="Book Now" class="btn" id="bookNowButton">           </div>
+           </div>
+            </div>
+          </form>
         </div>
-        <table class="calendar">
-            <thead>
-                <tr>
-                    <th>Sun</th>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Calendar cells will be generated here by JavaScript -->
-            </tbody>
-        </table>
+      </div>
     </div>
-
-    <!-- Booking Form -->
-    <form id="payment-form">
-        <h2>Booking Details</h2>
-        <label for="full-name">Full Name:</label>
-        <input type="text" id="full-name" name="full-name" required><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-
-        <label for="check-in-date">Check-In Date:</label>
-        <input type="text" id="check-in-date" name="check-in-date" readonly required><br>
-
-        <label for="check-out-date">Check-Out Date:</label>
-        <input type="text" id="check-out-date" name="check-out-date" readonly required><br>
-
-        <label for="guests">Number of Guests:</label>
-        <input type="number" id="guests" name="guests" min="1" required><br>
-
-        <h2>Payment Information</h2>
-        <label for="card-number">Card Number:</label>
-        <input type="text" id="card-number" name="card-number" required><br>
-
-        <label for="card-name">Cardholder Name:</label>
-        <input type="text" id="card-name" name="card-name" required><br>
-
-        <label for="expiration-month">Expiration Month:</label>
-        <input type="text" id="expiration-month" name="expiration-month" required><br>
-
-        <label for="expiration-year">Expiration Year:</label>
-        <input type="text" id="expiration-year" name="expiration-year" required><br>
-
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" required><br>
-
-        <button type="submit">Book Now</button>
-    </form>
-
-    <script src="./js/book.js"></script> <!-- Include your JavaScript file -->
-</body>
-</html>
+      <!-- Modal for Pesapal Payment -->
+      <div id="pesapalModal" class="modal">
+        <div class="modal-content">
+            <!-- Place your Pesapal payment form or iframe here -->
+            <!-- For example, you can use an iframe to embed the Pesapal payment page -->
+            <iframe src="https://www.pesapal.com/payment-form" frameborder="0" width="100%" height="400"></iframe>
+        </div>
+    </div>
+    <script src="./js/book.js"></script>
+    </body>
+    </html>
