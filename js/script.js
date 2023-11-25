@@ -1,166 +1,74 @@
-// Imports
-import { SessionsClient } from "https://esm.sh/dialogflow";
-
-
-$(document).ready(function () {
-  // Function to show the chatbot subject
-  function showChatBotSubject() {
-    $(this).parents('.botIcon').addClass('showBotSubject');
-    $("[name='msg']").focus();
-  }
-
-  // Function to close the chatbot
-  function closeChatBot() {
-    var botIcon = $(this).parents('.botIcon');
-    botIcon.removeClass('showBotSubject');
-    botIcon.removeClass('showMessenger');
-  }
-
-  // Function to handle the bot subject form submission
-  function handleBotSubjectFormSubmit(e) {
-    e.preventDefault();
-
-    var botIcon = $(this).parents('.botIcon');
-    botIcon.removeClass('showBotSubject');
-    botIcon.addClass('showMessenger');
-  }
-
-  // Event listeners for chatbot subject and close buttons
-  $(document).on('click', '.iconInner', showChatBotSubject);
-  $(document).on('click', '.closeBtn, .chat_close_icon', closeChatBot);
-
-  // Event listener for bot subject form submission
-  $(document).on('submit', '#botSubject', handleBotSubjectFormSubmit);
-
-  // Chatbot Code
-  $(document).on("submit", "#messenger", function (e) {
-    e.preventDefault();
-
-    var val = $("[name=msg]").val().toLowerCase();
-    var mainval = $("[name=msg]").val();
-    var name = '';
-    var nowtime = new Date();
-    var nowhour = nowtime.getHours();
-
-    function userMsg(msg) {
-      $('.Messages_list').append('<div class="msg user"><span class="avtr"><figure style="background-image: url(https://mrseankumar25.github.io/Sandeep-Kumar-Frontend-Developer-UI-Specialist/images/avatar.png)"></figure></span><span class="responsText">' + mainval + '</span></div>');
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.querySelector(".chat-input span");
+let userMessage = null; // Variable to store user's message
+const API_KEY = "PASTE-YOUR-API-KEY"; // Paste your API key here
+const inputInitHeight = chatInput.scrollHeight;
+const createChatLi = (message, className) => {
+    // Create a chat <li> element with passed message and className
+    const chatLi = document.createElement("li");
+    chatLi.classList.add("chat", `${className}`);
+    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
+    chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
+    return chatLi; // return chat <li> element
+}
+const generateResponse = (chatElement) => {
+    const API_URL = "https://api.openai.com/v1/chat/completions";
+    const messageElement = chatElement.querySelector("p");
+    // Define the properties and message for the API request
+    const requestOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${API_KEY}`
+        },
+        body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [{role: "user", content: userMessage}],
+        })
     }
-
-    function appendMsg(msg) {
-      $('.Messages_list').append('<div class="msg"><span class="avtr"><figure style="background-image: url(https://mrseankumar25.github.io/Sandeep-Kumar-Frontend-Developer-UI-Specialist/images/avatar.png)"></figure></span><span class="responsText">' + msg + '</span></div>');
-      $("[name='msg']").val("");
-    }
-
-    userMsg(mainval);
-
-    if (val.indexOf("hello") > -1 || val.indexOf("hi") > -1 || val.indexOf("good morning") > -1 || val.indexOf("good afternoon") > -1 || val.indexOf("good evening") > -1 || val.indexOf("good night") > -1) {
-      if (nowhour >= 12 && nowhour <= 16) {
-        appendMsg('Good afternoon from Beisa Hotel!');
-      } else if (nowhour >= 10 && nowhour <= 12) {
-        appendMsg('Hi there! How can Beisa Hotel assist you?');
-      } else if (nowhour >= 0 && nowhour <= 10) {
-        appendMsg('Good morning! How can Beisa Hotel assist you today?');
-      } else {
-        appendMsg('Good evening from Beisa Hotel!');
-      }
-
-      appendMsg("May I know your name?");
-    } else if (val.indexOf("i have a problem with") > -1) {
-      if (val.indexOf("reservation") > -1 || val.indexOf("booking") > -1) {
-        appendMsg("I can help you with your reservation. Please provide your reservation details.");
-      } else {
-        appendMsg("I'm sorry, I couldn't understand your request. Please ask something else related to Beisa Hotel.");
-      }
-    } else if (val.indexOf("my name is ") > -1 || val.indexOf("i am ") > -1 || val.indexOf("i'm ") > -1 || val.split(" ").length < 2) {
-      if (val.indexOf("my name is") > -1) {
-        name = val.replace("my name is", "");
-      } else if (val.indexOf("i am") > -1) {
-        name = val.replace("i am", "");
-      } else if (val.indexOf("i'm") > -1) {
-        name = val.replace("i'm", "");
-      } else {
-        name = mainval;
-      }
-
-      appendMsg("Hello, " + name + "! How can Beisa Hotel assist you today?");
-    } else {
-      appendMsg("I'm sorry, I couldn't understand your request. Please ask something related to Beisa Hotel.");
-    }
-
-    var lastMsg = $('.Messages_list').find('.msg').last().offset().top;
-    $('.Messages').animate({
-      scrollTop: lastMsg
-    }, 'slow');
-  });
+    // Send POST request to API, get response and set the reponse as paragraph text
+    fetch(API_URL, requestOptions).then(res => res.json()).then(data => {
+        messageElement.textContent = data.choices[0].message.content.trim();
+    }).catch(() => {
+        messageElement.classList.add("error");
+        messageElement.textContent = "Oops! Something went wrong. Please try again.";
+    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
+}
+const handleChat = () => {
+    userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
+    if(!userMessage) return;
+    // Clear the input textarea and set its height to default
+    chatInput.value = "";
+    chatInput.style.height = `${inputInitHeight}px`;
+    // Append the user's message to the chatbox
+    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+    chatbox.scrollTo(0, chatbox.scrollHeight);
+    
+    setTimeout(() => {
+        // Display "Thinking..." message while waiting for the response
+        const incomingChatLi = createChatLi("Thinking...", "incoming");
+        chatbox.appendChild(incomingChatLi);
+        chatbox.scrollTo(0, chatbox.scrollHeight);
+        generateResponse(incomingChatLi);
+    }, 600);
+}
+chatInput.addEventListener("input", () => {
+    // Adjust the height of the input textarea based on its content
+    chatInput.style.height = `${inputInitHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`;
 });
-
-// Dialogflow setup
-const sessionClient = new SessionsClient({ projectId: 'beisa-403309' });
-
-// Configuration
-const BOT_NAME = 'Claude';
-const BOT_AVATAR = 'bot.png';
-const USER_AVATAR = 'user.png';
-
-// DOM Elements
-const chatbot = document.getElementById('chatbot');
-const chatHistory = document.getElementById('chat-history');
-const chatForm = document.getElementById('messenger');
-const chatInput = document.getElementById('chat-input');
-
-// Initialize chatbot
-function init() {
-  // Show greeting
-  showBotMessage("Hi there! I'm Claude.");
-
-  // Form submit listener
-  chatForm.addEventListener('submit', onChatSubmit);
-}
-
-// Form submit handler
-function onChatSubmit(e) {
-  e.preventDefault();
-
-  let input = chatInput.value;
-  showUserMessage(input);
-  getBotResponse(input);
-  chatInput.value = '';
-}
-
-// Get response from Dialogflow
-async function getBotResponse(input) {
-  let request = {
-    session: sessionClient.sessionPath('beisa-403309', 'unique-session-id'),
-    queryInput: {
-      text: {
-        text: input,
-        languageCode: 'en-US',
-      },
-    },
-  };
-
-  let responses = await sessionClient.detectIntent(request);
-  let botMessage = responses[0].queryResult.fulfillmentText;
-  showBotMessage(botMessage);
-}
-
-// Show user message
-function showUserMessage(msg) {
-  chatHistory.innerHTML += `
-    <div class="user-msg">
-      <span>${msg}</span>
-    </div>
-  `;
-}
-
-// Show bot response
-function showBotMessage(msg) {
-  chatHistory.innerHTML += `
-    <div class="bot-msg">
-      <span>${msg}</span>
-    </div>
-  `;
-}
-
-// Initialize
-init();
+chatInput.addEventListener("keydown", (e) => {
+    // If Enter key is pressed without Shift key and the window 
+    // width is greater than 800px, handle the chat
+    if(e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+        e.preventDefault();
+        handleChat();
+    }
+});
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
