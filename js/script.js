@@ -17,23 +17,32 @@ const createChatLi = (message, className) => {
   return chatLi; // return chat <li> element
 }
 
+const greetings = ["hey", "hello", "hi","ssup","sasa", "yoh"];
+
 const generateResponse = (chatElement) => {
-    const messageElement = chatElement.querySelector("p");
-    let response = "I'm sorry, I don't understand. Please contact customer care at +254 722 454978. for assistance.";
+
+  const messageElement = chatElement.querySelector("p");
   
-    if (userMessage.toLowerCase().includes("Hello", "hello", "Hi", "hi")) {
-      response = "Welcome to Beisa Hotel. If you looking for  room reservations type room reservation ,if you want conference details type conference.Thankyou.";
-    } else if (userMessage.toLowerCase().includes("hotel")) {
-      response = "To make a room reservation at Beisa Hotel, please visit our website  at the book now section or speed connection  contact us at +254 722 454978.";
-    } else if (userMessage.toLowerCase().includes("conference")) {
-      response = "Beisa Hotel offers various amenities including a pool, restuarant and conference center head to the gallery section to view our conference centre then contact +254 722 454978. to get the variance in each conference   . For more details, please contact us at +254 722 454978.";
-    }
-    // Add more conditions and responses as needed
+  let response;
+
+  if (greetings.some(g => userMessage.toLowerCase().includes(g))) {
+    response = "Welcome to Beisa Hotel. If you are looking for room reservations type 'hotel', if you want conference details type 'conference'. Thank you.";
+
+  } else if (userMessage.toLowerCase().includes("hotel")) {
+    response = "To make a room reservation at Beisa Hotel, please visit our website at the book now section or for speedy connection contact us at +254 722 454978.";
+
+  } else if (userMessage.toLowerCase().includes("conference")) {
+    response = "Beisa Hotel offers various amenities including a pool, restaurant and conference center. Head to the gallery section to view our conference centre then contact +254 722 454978 to get the variance in each conference. For more details, please contact us at +254 722 454978.";
   
-    messageElement.textContent = response;
-    chatbox.scrollTo(0, chatbox.scrollHeight);
+  } else {
+    response = "I'm sorry, I don't understand. Please contact customer care at +254 722 454978 for assistance.";  
   }
 
+  messageElement.textContent = response;
+  
+  chatbox.scrollTo(0, chatbox.scrollHeight);
+
+}
 const handleChat = () => {
   userMessage = chatInput.value.trim(); // Get user entered message and remove extra whitespace
   if(!userMessage) return;
